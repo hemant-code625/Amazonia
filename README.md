@@ -111,7 +111,7 @@ amazonia/
 
 #### Homepage
 
-![Homepage](https://via.placeholder.com/800x400?text=Amazon-like+Homepage)
+![Homepage](https://github.com/user-attachments/assets/36162bea-077f-4feb-a508-3d346cdf7fb3)
 
 #### Product Page
 
