@@ -8,7 +8,7 @@ const Home = () => {
     <div className="bg-gray-50">
       <div className="relative">
         <Banner />
-        <div className="absolute bg-gray-50 bottom-[-250px] left-1/2 transform -translate-x-1/2 w-full max-w-7xl px-4">
+        <div className="absolute bottom-[-100px] left-1/2 transform -translate-x-1/2 w-full max-w-7xl px-4">
           {/* Explore Cards */}
           <ExploreCard />
         </div>

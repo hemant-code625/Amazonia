@@ -51,30 +51,94 @@ export const TRENDING_PRODUCTS = [
   },
 ];
 
-import c3 from "../assets/categories/186x116_Home_decor_1._SY116_CB555624324_.jpg";
-export const EXPLORE_CATEGORIES = [
+import decor from "../assets/categories/186x116_Home_decor_1._SY116_CB555624324_.jpg";
+import bedsheet from "../assets/categories/186x116_Home_furnishings_2._SY116_CB555624324_.jpg";
+import lightings from "../assets/categories/186x116_Home_lighting_2._SY116_CB555624324_.jpg";
+import furniture from "../assets/categories/186x116_Home_storage_1._SY116_CB555624324_.jpg";
+export const CATEGORY_GROUPS = [
   {
     id: 1,
-    title: "Home storage",
-    category: "home-deocr",
-    image: "https://placehold.co/300x300?text=Storage",
+    title: "Revamp Your Home in Style",
+    categories: [
+      {
+        id: 1,
+        title: "Furniture",
+        image: furniture,
+        category: "furniture",
+      },
+      {
+        id: 2,
+        title: "Lighting",
+        image: lightings,
+        category: "lighting",
+      },
+      { id: 3, title: "Decor", image: decor, category: "decor" },
+      {
+        id: 4,
+        title: "Cushion covers, bedsheets & more",
+        image: bedsheet,
+        category: "bedsheets",
+      },
+    ],
   },
   {
     id: 2,
-    title: "Ligthing Solutions",
-    category: "home-deocr",
-    image: "https://placehold.co/300x300?text=Lighting",
+    title: "Upgrade Your Wardrobe",
+    categories: [
+      {
+        id: 5,
+        title: "Men's Clothing",
+        image: "path/to/mens.jpg",
+        category: "mens",
+      },
+      {
+        id: 6,
+        title: "Women's Clothing",
+        image: "path/to/womens.jpg",
+        category: "womens",
+      },
+      {
+        id: 7,
+        title: "Kids' Fashion",
+        image: "path/to/kids.jpg",
+        category: "kids",
+      },
+      {
+        id: 8,
+        title: "Accessories",
+        image: "path/to/accessories.jpg",
+        category: "accessories",
+      },
+    ],
   },
   {
     id: 3,
-    title: "Figurines, vases & more",
-    category: "home-deocr",
-    image: c3,
-  },
-  {
-    id: 4,
-    title: "Cushion covers, bedsheets & more",
-    category: "home-decor",
-    image: "https://placehold.co/300x300?text=Cushions",
+    title: "Tech & Gadgets",
+    categories: [
+      {
+        id: 9,
+        title: "Smartphones",
+        image: "path/to/smartphones.jpg",
+        category: "smartphones",
+      },
+      {
+        id: 10,
+        title: "Laptops",
+        image: "path/to/laptops.jpg",
+        category: "laptops",
+      },
+      {
+        id: 11,
+        title: "Headphones",
+        image: "path/to/headphones.jpg",
+        category: "headphones",
+      },
+      {
+        id: 12,
+        title: "Smartwatches",
+        image: "path/to/smartwatches.jpg",
+        category: "smartwatches",
+      },
+    ],
   },
 ];
