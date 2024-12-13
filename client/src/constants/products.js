@@ -51,10 +51,23 @@ export const TRENDING_PRODUCTS = [
   },
 ];
 
-import decor from "../assets/categories/186x116_Home_decor_1._SY116_CB555624324_.jpg";
-import bedsheet from "../assets/categories/186x116_Home_furnishings_2._SY116_CB555624324_.jpg";
-import lightings from "../assets/categories/186x116_Home_lighting_2._SY116_CB555624324_.jpg";
-import furniture from "../assets/categories/186x116_Home_storage_1._SY116_CB555624324_.jpg";
+import decor from "../assets/categories/home-decor/186x116_Home_decor_1._SY116_CB555624324_.jpg";
+import bedsheet from "../assets/categories/home-decor/186x116_Home_furnishings_2._SY116_CB555624324_.jpg";
+import lightings from "../assets/categories/home-decor/186x116_Home_lighting_2._SY116_CB555624324_.jpg";
+import furniture from "../assets/categories/home-decor/186x116_Home_storage_1._SY116_CB555624324_.jpg";
+import ac from "../assets/categories/appliances/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg";
+import refrigerators from "../assets/categories/appliances/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg";
+import microwaves from "../assets/categories/appliances/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg";
+import washingMachines from "../assets/categories/appliances/186x116---wm._SY116_CB667322346_.jpg";
+import duck from "../assets/categories/toys/duck.jpg";
+import chess from "../assets/categories/toys/chess.jpg";
+import animal_ride from "../assets/categories/toys/animal_ride.jpg";
+import park from "../assets/categories/toys/park.jpg";
+import cleaner from "../assets/categories/automotive-essentials/Glasscare1X._SY116_CB410830553_.jpg";
+import tyreRim from "../assets/categories/automotive-essentials/Rim_tyrecare1x._SY116_CB410830552_.jpg";
+import vaccumCleaner from "../assets/categories/automotive-essentials/Vaccum1x._SY116_CB410830552_.jpg";
+import helmets from "../assets/categories/automotive-essentials/Vega_helmet_186x116._SY116_CB405090404_.jpg";
+
 export const CATEGORY_GROUPS = [
   {
     id: 1,
@@ -83,61 +96,91 @@ export const CATEGORY_GROUPS = [
   },
   {
     id: 2,
-    title: "Upgrade Your Wardrobe",
+    title: "Appliances for your home | Up to 55% off",
     categories: [
       {
         id: 5,
-        title: "Men's Clothing",
-        image: "path/to/mens.jpg",
-        category: "mens",
+        title: "Air Conditioners",
+        image: ac,
+        category: "airConditioners",
       },
       {
         id: 6,
-        title: "Women's Clothing",
-        image: "path/to/womens.jpg",
+        title: "Refrigerators",
+        image: refrigerators,
         category: "womens",
       },
       {
         id: 7,
-        title: "Kids' Fashion",
-        image: "path/to/kids.jpg",
-        category: "kids",
+        title: "Microvaves",
+        image: microwaves,
+        category: "microwaves",
       },
       {
         id: 8,
-        title: "Accessories",
-        image: "path/to/accessories.jpg",
-        category: "accessories",
+        title: "Washing machines",
+        image: washingMachines,
+        category: "washingMachines",
       },
     ],
   },
   {
     id: 3,
-    title: "Tech & Gadgets",
+    title: "Min. 40% off | Toys for your little ones | Amazon brands",
     categories: [
       {
         id: 9,
-        title: "Smartphones",
-        image: "path/to/smartphones.jpg",
-        category: "smartphones",
+        title: "Min 40% off | Soft toys",
+        image: duck,
+        category: "softToys",
       },
       {
         id: 10,
-        title: "Laptops",
-        image: "path/to/laptops.jpg",
+        title: "Min 40% off | Indoor games",
+        image: chess,
         category: "laptops",
       },
       {
         id: 11,
-        title: "Headphones",
-        image: "path/to/headphones.jpg",
+        title: "Min 40% off | Ride ons",
+        image: animal_ride,
         category: "headphones",
       },
       {
         id: 12,
-        title: "Smartwatches",
-        image: "path/to/smartwatches.jpg",
+        title: "Min 40% off | Outdoor toys",
+        image: park,
         category: "smartwatches",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Automotive essentials | Up to 60% off",
+    categories: [
+      {
+        id: 13,
+        title: "Cleaning Accessories",
+        image: cleaner,
+        category: "cleaningAccessories",
+      },
+      {
+        id: 14,
+        title: "Tyre & rim care",
+        image: tyreRim,
+        category: "tyreRimCare",
+      },
+      {
+        id: 15,
+        title: "Helmets",
+        image: helmets,
+        category: "helmets",
+      },
+      {
+        id: 16,
+        title: "Vaccum Cleaners",
+        image: vaccumCleaner,
+        category: "vaccumCleaners",
       },
     ],
   },

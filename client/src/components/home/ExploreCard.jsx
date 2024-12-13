@@ -5,24 +5,29 @@ import { CATEGORY_GROUPS } from "../../constants/products.js";
 const ExploreCard = () => {
   return (
     <section className="mb-8">
-      <div className="flex items-center">
+      <div className="flex flex-row justify-center gap-x-2">
         {CATEGORY_GROUPS.map((category) => (
           <div
             key={category.id}
-            className="flex flex-col items-center justify-center w-1/4 bg-white m-2"
+            className="flex flex-col items-center justify-between w-1/4 bg-gray-50"
           >
-            <h3 className="text-lg font-semibold mb-4">{category.title}</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <h3 className="text-lg font-semibold p-2 max-h-20 text-center">
+              {category.title}
+            </h3>
+            <div className="grid grid-cols-2 gap-4 pb-4">
               {category.categories.map((subCategory) => (
                 <div
                   key={subCategory.id}
-                  className="flex flex-col items-center"
+                  className="flex flex-col items-center text-center"
                 >
                   <img
                     src={subCategory.image}
                     alt={subCategory.title}
-                    className="w-full m-4"
+                    className="w-32 h-20 object-cover "
                   />
+                  <p className="text-sm font-semibold mt-2">
+                    {subCategory.title}
+                  </p>
                 </div>
               ))}
             </div>

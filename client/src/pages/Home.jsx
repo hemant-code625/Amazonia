@@ -13,7 +13,7 @@ const Home = () => {
           <ExploreCard />
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[17rem]">
+      <div className="max-w-[83rem] mx-auto px-4 sm:px-6 lg:px-8 mt-[17rem]">
         <BestOffers />
         <TrendingProducts />
       </div>

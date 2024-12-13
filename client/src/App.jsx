@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import PersonalizedRecommendations from "./components/recommendations/PersonalizedRecommendations";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
             <Route path="*" element={<>Page not Found</>} />
           </Routes>
         </main>
+        <PersonalizedRecommendations />
+        <Footer />
       </div>
     </Router>
   );
