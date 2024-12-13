@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function PersonalizedRecommendations() {
   return (
-    <div className="bg-gray-100 py-8">
+    <div className="bg-gray-100 border-t-2 py-8">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-xl font-bold mb-4">
           See personalized recommendations
