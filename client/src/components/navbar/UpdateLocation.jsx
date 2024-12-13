@@ -7,7 +7,7 @@ const UpdateLocation = () => {
       <div className="flex items-center">
         <img src={location_icon} alt="location icon" className="w-8" />
         <div>
-          <div className="text-sm">Delivering to Bangalore 560002</div>
+          <div className="text-sm">Delivering to you</div>
           <div className="font-bold">Update Location</div>
         </div>
       </div>
