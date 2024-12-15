@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
   return (
     <Link
       to={`/product/${product.id}`}
-      className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative flex flex-col"
+      className="group bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300 relative flex flex-col"
     >
       <WishlistButton productId={product.id} />
       <div className="aspect-square overflow-hidden">
@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
         />
       </div>
       <div className="p-4 flex flex-col flex-grow">
-        <h3 className="text-sm sm:text-base font-medium text-gray-800 line-clamp-2 mb-1 group-hover:text-amazon-orange transition-colors">
+        <h3 className="text-sm sm:text-base font-medium text-gray-800 line-clamp-2 mb-1">
           {product.title}
         </h3>
         <ProductRating rating={product.rating} />

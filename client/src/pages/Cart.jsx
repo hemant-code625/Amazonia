@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import CartItem from "../components/cart/CartItem";
 import CartSummary from "../components/cart/CartSummary";
 
@@ -22,6 +23,10 @@ const Cart = () => {
     // Implement delete logic
     console.log("Delete item", id);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

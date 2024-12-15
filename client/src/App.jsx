@@ -5,7 +5,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 import PersonalizedRecommendations from "./components/recommendations/PersonalizedRecommendations";
 import Footer from "./components/footer/Footer";
-
+import SignUp from "./components/auth/SignUp";
 const App = () => {
   return (
     <Router>
@@ -16,6 +16,14 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
+            <Route
+              path="/signin"
+              element={
+                <>
+                  <SignUp />
+                </>
+              }
+            />
             <Route path="*" element={<>Page not Found</>} />
           </Routes>
         </main>

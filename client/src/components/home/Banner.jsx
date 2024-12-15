@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import b1 from "../../assets/banners/PC_Hero_1x-toys._CB582765723_.jpg";
 import b2 from "../../assets/banners/Nov_New_1500x600._CB542180708_.jpg";
 import b3 from "../../assets/banners/Skincare-PCczx._CB539647709_.png";
@@ -40,21 +41,15 @@ function Banner() {
         ))}
       </div>
 
-      {/* Left Arrow */}
-      <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 text-7xl bg-[#393d42c7]  text-white  rounded-lg  "
+      <ChevronLeftIcon
+        className="absolute w-14 h-14 cursor-pointer top-1/2 left-4 transform -translate-y-1/2 text-7xl bg-[#393d42c7] text-white  rounded-lg  "
         onClick={prevSlide}
-      >
-        &lt;
-      </button>
+      ></ChevronLeftIcon>
 
-      {/* Right Arrow */}
-      <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-7xl bg-[#393d42c7]  text-white  rounded-lg "
+      <ChevronRightIcon
+        className="absolute w-14 h-14 cursor-pointer top-1/2 right-4 transform -translate-y-1/2 text-7xl bg-[#393d42c7]  text-white  rounded-lg "
         onClick={nextSlide}
-      >
-        &gt;
-      </button>
+      ></ChevronRightIcon>
 
       {/* Dots Navigation */}
       {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">

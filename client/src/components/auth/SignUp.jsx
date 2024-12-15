@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function SignUp() {
@@ -7,7 +7,9 @@ function SignUp() {
     mobile: "",
     password: "",
   });
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission

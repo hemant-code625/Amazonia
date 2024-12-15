@@ -13,7 +13,7 @@ const WishlistButton = ({ productId }) => {
         e.preventDefault();
         toggleWishlist(productId);
       }}
-      className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md "
+      className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md z-20"
     >
       {inWishlist ? (
         <HeartSolid className="h-6 w-6 text-red-500" />

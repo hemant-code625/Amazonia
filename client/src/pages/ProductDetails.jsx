@@ -4,9 +4,14 @@ import ProductInfo from "../components/product/ProductInfo";
 import ProductSpecs from "../components/product/ProductSpecs";
 import AddToCart from "../components/product/AddToCart";
 import RelatedProducts from "../components/product/RelatedProducts";
+import { useEffect } from "react";
 
 const ProductDetails = () => {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Mock product data (replace with actual data fetching)
   const product = {
