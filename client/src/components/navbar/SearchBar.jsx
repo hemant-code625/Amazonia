@@ -1,18 +1,46 @@
+import { useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
-const SearchBar = () => {
+function SearchBar() {
+  const [category, setCategory] = useState("all");
+
+  const categories = [
+    { id: "all", name: "All" },
+    { id: "electronics", name: "Electronics" },
+    { id: "computers", name: "Computers" },
+    { id: "fashion", name: "Fashion" },
+    { id: "books", name: "Books" },
+  ];
+
   return (
-    <div className="flex-1 max-w-2xl mx-8">
-      <div className="relative">
-        <input
-          type="text"
-          className="w-full px-4 py-2 pr-10 rounded-md text-black bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          placeholder="Search Amazonia"
-        />
-        <MagnifyingGlassIcon className="h-6 w-6 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600" />
+    <div className="flex flex-1 max-w-4xl m-2.5">
+      <div className="relative group flex-1 focus-within:ring-2 focus-within:ring-amazon-orange rounded-md">
+        <div className="flex">
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className="h-10 max-w-fit bg-gray-100 border-r border-gray-300 rounded-l-md px-3 text-black text-sm focus:outline-none"
+          >
+            {categories.map((cat) => (
+              <option key={cat.id} value={cat.id}>
+                {cat.name}
+              </option>
+            ))}
+          </select>
+
+          <input
+            type="text"
+            className="flex-1 h-10 px-4 text-black focus:outline-none"
+            placeholder="Search Amazon.in"
+          />
+
+          <button className="h-10 px-6 bg-amazon-orange  rounded-r-md flex items-center justify-center">
+            <MagnifyingGlassIcon className="h-5 w-5 text-gray-800" />
+          </button>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default SearchBar;

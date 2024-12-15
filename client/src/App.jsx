@@ -6,6 +6,7 @@ import Cart from "./pages/Cart";
 import PersonalizedRecommendations from "./components/recommendations/PersonalizedRecommendations";
 import Footer from "./components/footer/Footer";
 import SignUp from "./components/auth/SignUp";
+import AllProducts from "./pages/AllProducts";
 const App = () => {
   return (
     <Router>
@@ -21,6 +22,14 @@ const App = () => {
               element={
                 <>
                   <SignUp />
+                </>
+              }
+            />
+            <Route
+              path="/all"
+              element={
+                <>
+                  <AllProducts />
                 </>
               }
             />

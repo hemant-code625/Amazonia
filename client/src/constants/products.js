@@ -249,3 +249,9 @@ export const CATEGORY_GROUPS = [
     ],
   },
 ];
+
+export const ALL_PRODUCTS = [
+  ...FEATURED_PRODUCTS,
+  ...BEST_OFFERS,
+  ...TRENDING_PRODUCTS,
+];

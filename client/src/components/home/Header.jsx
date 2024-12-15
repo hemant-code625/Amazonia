@@ -25,7 +25,7 @@ const Header = () => {
           {categories.map((category) => (
             <li key={category}>
               <Link
-                to="/"
+                to="/all"
                 className="hover:border-2 hover:border-white p-2 rounded-sm"
               >
                 {category}
