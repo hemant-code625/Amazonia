@@ -25,13 +25,13 @@ function SignUp() {
 
   return (
     <div className="min-h-screen flex flex-col items-center pt-8 pb-16 px-4">
-      <Link to="/">
+      {/* <Link to="/">
         <img
           src="/amazon-logo-black.png"
           alt="Amazon Logo"
           className="h-8 mb-8"
         />
-      </Link>
+      </Link> */}
 
       <div className="w-full max-w-[350px] bg-white p-6 border border-gray-300 rounded-lg">
         <h1 className="text-3xl font-normal mb-4">Create Account</h1>
@@ -137,7 +137,7 @@ function SignUp() {
         <div className="mt-8 text-sm">
           Already have an account?{" "}
           <Link
-            to="/signin"
+            to="/signup"
             className="text-blue-600 hover:text-blue-800 hover:underline"
           >
             Sign in

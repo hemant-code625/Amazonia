@@ -14,7 +14,7 @@ function EmptyCart() {
       </p>
       <div className="mt-4 space-x-4">
         <Link
-          to="/signin"
+          to="/signup"
           className="inline-block bg-amazon-yellow hover:bg-yellow-400 text-sm font-semibold py-2 px-6 rounded"
         >
           Sign in to your account

@@ -1,31 +1,33 @@
 /* eslint-disable react/prop-types */
-import { formatPrice } from "../../utils/formatters";
-
 const CartSummary = ({ items }) => {
-  const subtotal = items.reduce(
-    (acc, item) => acc + item.price * item.quantity,
+  const total = items.reduce(
+    (sum, item) => sum + item.price * item.quantity,
     0
   );
+  const shipping = total > 50 ? 0 : 5.99; // Free shipping if over $50
 
   return (
-    <div className="card">
-      <h2 className="text-xl font-bold mb-4">Order Summary</h2>
+    <div className="border border-gray-300 p-6 rounded-lg shadow-md bg-white sticky top-4">
+      <h2 className="text-2xl font-semibold mb-4">Order Summary</h2>
       <div className="space-y-2">
         <div className="flex justify-between">
-          <span>Subtotal ({items.length} items):</span>
-          <span className="font-bold">{formatPrice(subtotal)}</span>
+          <span className="text-gray-700">Subtotal</span>
+          <span className="text-gray-900">₹ {total.toFixed(2)}</span>
         </div>
         <div className="flex justify-between">
-          <span>Shipping:</span>
-          <span className="font-bold">FREE</span>
+          <span className="text-gray-700">Shipping</span>
+          <span className="text-gray-900">₹ {shipping.toFixed(2)}</span>
         </div>
-        <hr className="my-4" />
-        <div className="flex justify-between text-xl font-bold">
-          <span>Total:</span>
-          <span>{formatPrice(subtotal)}</span>
+        <div className="flex justify-between font-semibold">
+          <span>Total</span>
+          <span className="text-xl text-gray-900">
+            ₹ {(total + shipping).toFixed(2)}
+          </span>
         </div>
       </div>
-      <button className="button w-full mt-4">Proceed to Checkout</button>
+      <button className="w-full mt-4 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200">
+        Proceed to Checkout
+      </button>
     </div>
   );
 };

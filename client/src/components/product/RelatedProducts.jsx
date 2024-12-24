@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import ProductCard from "../ProductCard";
 
 const RelatedProducts = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
   const products = [
     {
       id: 1,
@@ -27,9 +24,7 @@ const RelatedProducts = () => {
 
   return (
     <div className="relative">
-      <h2 className="text-xl font-bold mb-4">
-        Customers who bought this item also bought
-      </h2>
+      <h2 className="text-xl font-bold mb-4">You may also like</h2>
 
       <div className="relative">
         <button

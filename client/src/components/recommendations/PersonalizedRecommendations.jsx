@@ -7,7 +7,7 @@ function PersonalizedRecommendations() {
         <h2 className="text-xl font-bold mb-4">
           See personalized recommendations
         </h2>
-        <Link to="/signin">
+        <Link to="/signup">
           <button className="bg-amazon-yellow hover:bg-yellow-400 text-sm font-semibold py-2 px-8 rounded">
             Sign in
           </button>

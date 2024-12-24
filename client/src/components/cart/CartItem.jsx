@@ -1,36 +1,42 @@
 /* eslint-disable react/prop-types */
-import { formatPrice } from "../../utils/formatters";
-
 const CartItem = ({ item, onUpdateQuantity, onDelete }) => {
+  const handleQuantityChange = (newQuantity) => {
+    onUpdateQuantity(item.id, newQuantity);
+  };
+
   return (
-    <div className="card flex items-center space-x-4">
+    <div className="flex items-center border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
       <img
         src={item.image}
         alt={item.title}
-        className="w-32 h-32 object-cover"
+        className="w-24 h-24 object-contain mr-4"
       />
       <div className="flex-1">
-        <h3 className="text-lg font-semibold">{item.title}</h3>
-        <p className="text-xl font-bold mt-2">{formatPrice(item.price)}</p>
-        <div className="mt-2 flex items-center space-x-2">
-          <select
-            value={item.quantity}
-            onChange={(e) => onUpdateQuantity(item.id, Number(e.target.value))}
-            className="border rounded-md p-1"
-          >
-            {[1, 2, 3, 4, 5].map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
-          </select>
-          <button
-            onClick={() => onDelete(item.id)}
-            className="text-blue-600 hover:text-blue-800"
-          >
-            Delete
-          </button>
-        </div>
+        <p className="font-semibold text-lg">{item.title}</p>
+        <p className="text-gray-600 text-sm">₹ {item.price.toFixed(2)}</p>
+      </div>
+
+      <div className="flex items-center space-x-2">
+        <button
+          className="px-3 py-1 bg-gray-200 rounded-full hover:bg-gray-300"
+          onClick={() => handleQuantityChange(item.quantity - 1)}
+          disabled={item.quantity <= 1}
+        >
+          -
+        </button>
+        <span>{item.quantity}</span>
+        <button
+          className="px-3 py-1 bg-gray-200 rounded-full hover:bg-gray-300"
+          onClick={() => handleQuantityChange(item.quantity + 1)}
+        >
+          +
+        </button>
+        <button
+          className="ml-4 text-red-500 hover:text-red-600"
+          onClick={() => onDelete(item.id)}
+        >
+          🗑️
+        </button>
       </div>
     </div>
   );

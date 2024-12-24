@@ -47,6 +47,40 @@ const ProductDetails = () => {
     ],
   };
 
+  // fashion product like men jacket
+  // const product = {
+  //   id: 1,
+  //   title: "Men's Leather Jacket",
+  //   price: 2116.09,
+  //   mrp: 3469.0,
+  //   discount: 39,
+  //   rating: 4.5,
+  //   reviewCount: "5,529",
+  //   images: [
+  //     {
+  //       url: "https://placehold.co/600x600?text=Jacket+1",
+  //       alt: "Jacket front view",
+  //     },
+  //     {
+  //       url: "https://placehold.co/600x600?text=Jacket+2",
+  //       alt: "Jacket side view",
+  //     },
+  //   ],
+  //   specs: {
+  //     Material: "Leather",
+  //     Color: "Black",
+  //     Size: "M, L, XL",
+  //     Brand: "Levi's",
+  //   },
+  //   features: [
+  //     "CLASSIC DESIGN: The classical mirror polish of the appearance makes your electric kettle unique and aesthetic",
+  //     "CORDLESS POURING: The electric kettle can be easily lifted from its swivel base for easy filling",
+  //     "CONVENIENT: The cordless & BPA-Free electric kettle makes a striking presence on any kitchen counter",
+  //     "FAST BOIL: This 1500W electric kettle has concealed heating elements",
+  //     "EASY CLEAN: Use white vinegar, baking soda, water, cleaning bottle brush and microfiber cloth",
+  //   ],
+  // };
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
