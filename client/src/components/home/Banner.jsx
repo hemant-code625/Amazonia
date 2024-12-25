@@ -50,7 +50,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className="relative w-full h-full overflow-hidden mt-[5vh] md:mt-[0vh]">
+    <div className="relative w-full h-full overflow-hidden mt-[4vh] md:-mt-[4px]">
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
