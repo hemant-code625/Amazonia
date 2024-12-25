@@ -11,6 +11,9 @@ export default {
           orange: "#FF9900",
         },
       },
+      screens: {
+        "max-navLen": { max: "1103px" },
+      },
       fontSize: {
         "2xs": "0.625rem",
       },

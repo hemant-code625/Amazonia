@@ -20,13 +20,13 @@ const Header = () => {
 
   return (
     <header className="bg-amazon-light text-white">
-      <div className="max-w-full mx-auto">
-        <ul className="flex items-center space-x-4 text-sm h-10 px-4">
+      <div className="max-w-full mx-auto overflow-x-auto scrollbar-hidden">
+        <ul className="flex items-center space-x-4 text-sm h-10 px-4 md:space-x-6">
           {categories.map((category) => (
             <li key={category}>
               <Link
                 to="/all"
-                className="hover:border-2 hover:border-white p-2 rounded-sm"
+                className="hover:border-2 hover:border-white p-2 rounded-sm whitespace-nowrap"
               >
                 {category}
               </Link>
