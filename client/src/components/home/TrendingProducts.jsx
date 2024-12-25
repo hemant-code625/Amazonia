@@ -47,7 +47,6 @@ const TrendingProducts = () => {
             canScrollLeft ? "opacity-100" : "opacity-50 cursor-not-allowed"
           }`}
           disabled={!canScrollLeft}
-          style={{ marginLeft: "-2rem" }}
         >
           <ChevronLeftIcon className="w-6 h-6" />
         </button>
@@ -78,7 +77,6 @@ const TrendingProducts = () => {
             canScrollRight ? "opacity-100" : "opacity-50 cursor-not-allowed"
           }`}
           disabled={!canScrollRight}
-          style={{ marginRight: "-2rem" }}
         >
           <ChevronRightIcon className="w-6 h-6" />
         </button>

@@ -131,9 +131,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="hidden lg:block">
-        <Header />
-      </div>
+      <Header />
     </nav>
   );
 };

@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+// import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import ProductCard from "../ProductCard";
 
 const RelatedProducts = () => {
@@ -11,7 +11,54 @@ const RelatedProducts = () => {
       reviewCount: 3547,
       image: "https://placehold.co/300x300?text=Toaster",
     },
-    // Add more related products...
+    {
+      id: 1,
+      title: "Pigeon 2 Slice Auto Pop up Toaster",
+      price: 1099.0,
+      rating: 4.3,
+      reviewCount: 3547,
+      image: "https://placehold.co/300x300?text=Toaster",
+    },
+    {
+      id: 1,
+      title: "Pigeon 2 Slice Auto Pop up Toaster",
+      price: 1099.0,
+      rating: 4.3,
+      reviewCount: 3547,
+      image: "https://placehold.co/300x300?text=Toaster",
+    },
+    {
+      id: 1,
+      title: "Pigeon 2 Slice Auto Pop up Toaster",
+      price: 1099.0,
+      rating: 4.3,
+      reviewCount: 3547,
+      image: "https://placehold.co/300x300?text=Toaster",
+    },
+    {
+      id: 1,
+      title: "Pigeon 2 Slice Auto Pop up Toaster",
+      price: 1099.0,
+      rating: 4.3,
+      reviewCount: 3547,
+      image: "https://placehold.co/300x300?text=Toaster",
+    },
+    {
+      id: 1,
+      title: "Pigeon 2 Slice Auto Pop up Toaster",
+      price: 1099.0,
+      rating: 4.3,
+      reviewCount: 3547,
+      image: "https://placehold.co/300x300?text=Toaster",
+    },
+    {
+      id: 1,
+      title: "Pigeon 2 Slice Auto Pop up Toaster",
+      price: 1099.0,
+      rating: 4.3,
+      reviewCount: 3547,
+      image: "https://placehold.co/300x300?text=Toaster",
+    },
   ];
 
   const scroll = (direction) => {
@@ -27,15 +74,15 @@ const RelatedProducts = () => {
       <h2 className="text-xl font-bold mb-4">You may also like</h2>
 
       <div className="relative">
-        <button
+        {/* <button
           onClick={() => scroll("left")}
           className="absolute -left-20 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full shadow-md"
         >
           <ChevronLeftIcon className="h-6 w-6" />
-        </button>
+        </button> */}
         <div
           id="related-products"
-          className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4"
+          className="flex overflow-x-auto scrollbar-hidden space-x-4 pb-4"
         >
           {products.map((product) => (
             <div key={product.id} className="flex-none w-64">
@@ -44,12 +91,12 @@ const RelatedProducts = () => {
           ))}
         </div>
 
-        <button
+        {/* <button
           onClick={() => scroll("right")}
-          className="absolute -right-20 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full shadow-md"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full shadow-md"
         >
           <ChevronRightIcon className="h-6 w-6" />
-        </button>
+        </button> */}
       </div>
     </div>
   );

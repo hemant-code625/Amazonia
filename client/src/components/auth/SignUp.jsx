@@ -24,7 +24,7 @@ function SignUp() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center pt-8 pb-16 px-4">
+    <div className="min-h-screen flex flex-col items-center pt-8 pb-16 px-4 mt-18">
       {/* <Link to="/">
         <img
           src="/amazon-logo-black.png"
