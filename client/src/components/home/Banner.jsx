@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+// import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import b1 from "../../assets/banners/PC_Hero_1x-toys._CB582765723_.jpg";
 import b2 from "../../assets/banners/Nov_New_1500x600._CB542180708_.jpg";
 import b3 from "../../assets/banners/Skincare-PCczx._CB539647709_.png";
@@ -26,7 +26,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden mt-[3vh] md:-mt-[5vh] lg:mt-[0vh]">
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -41,18 +41,18 @@ function Banner() {
         ))}
       </div>
 
-      <ChevronLeftIcon
+      {/* <ChevronLeftIcon
         className="absolute w-14 h-14 cursor-pointer top-1/2 left-4 transform -translate-y-1/2 text-7xl bg-[#393d42c7] text-white  rounded-lg  "
         onClick={prevSlide}
-      ></ChevronLeftIcon>
+      ></ChevronLeftIcon> */}
 
-      <ChevronRightIcon
+      {/* <ChevronRightIcon
         className="absolute w-14 h-14 cursor-pointer top-1/2 right-4 transform -translate-y-1/2 text-7xl bg-[#393d42c7]  text-white  rounded-lg "
         onClick={nextSlide}
-      ></ChevronRightIcon>
+      ></ChevronRightIcon> */}
 
       {/* Dots Navigation */}
-      {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {banners.map((_, index) => (
           <button
             key={index}
@@ -62,7 +62,7 @@ function Banner() {
             onClick={() => setCurrentSlide(index)}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }

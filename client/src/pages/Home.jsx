@@ -8,12 +8,12 @@ const Home = () => {
     <div className="bg-gray-50">
       <div className="relative">
         <Banner />
-        <div className="absolute bottom-[-100px] left-1/2 transform -translate-x-1/2 w-full max-w-7xl px-4">
+        <div className="hidden md:block absolute bottom-[-100px] left-1/2 transform -translate-x-1/2 w-full max-w-7xl px-4">
           {/* Explore Cards */}
           <ExploreCard />
         </div>
       </div>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 mt-[10rem]">
+      <div className="mx-auto  sm:px-6 lg:px-8 mt-[10rem]">
         <BestOffers />
         <TrendingProducts />
       </div>

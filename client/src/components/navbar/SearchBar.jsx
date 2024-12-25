@@ -14,12 +14,12 @@ function SearchBar() {
 
   return (
     <div className="flex flex-1 md:m-2.5">
-      <div className="relative group flex-1 focus-within:ring-2 focus-within:ring-amazon-orange rounded-md w-full lg:max-w-4xl">
+      <div className="relative items-start group flex-1 focus-within:ring-2 focus-within:ring-amazon-orange rounded-md w-full lg:max-w-4xl">
         <div className="flex">
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
-            className="h-10 max-w-fit bg-gray-100 border-r border-gray-300 rounded-l-md px-3 text-black text-sm focus:outline-none"
+            className="hidden md:block h-10 max-w-fit bg-gray-100 border-r border-gray-300 rounded-l-md px-3 text-black text-sm focus:outline-none"
           >
             {categories.map((cat) => (
               <option key={cat.id} value={cat.id}>
