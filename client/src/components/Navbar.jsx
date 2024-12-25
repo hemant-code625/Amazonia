@@ -15,10 +15,45 @@ const Navbar = () => {
 
   return (
     <nav className="bg-amazon text-white fixed top-0 left-0 right-0 z-[100] shadow-lg">
-      <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* For Mobile Devices */}
+      {/* Left Hamburger Menu */}
+      <div className="md:hidden flex items-center justify-between px-4 sm:px-6 lg:px-8">
+        <button className=" p-2" onClick={() => setLeftNavOpen(true)}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 stroke-black dark:stroke-white"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+        <Link to="/" className="flex flex-shrink-0 hover:border-2 p-1 mt-2">
+          <img src={logo} alt="amazon-logo" className="h-12" />
+        </Link>
+
+        {/* Right User Menu */}
+        <div className="justify-end">
+          <div className="flex items-center space-x-4">
+            <CartIcon />
+            <button className="p-2" onClick={() => setRightNavOpen(true)}>
+              <img src={userMenuImage} alt="user-menu" className="h-8" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="block mx-auto md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Left Hamburger Menu */}
-          <button className="p-2" onClick={() => setLeftNavOpen(true)}>
+          <button
+            className="hidden md:block p-2"
+            onClick={() => setLeftNavOpen(true)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 stroke-black dark:stroke-white"
@@ -45,9 +80,7 @@ const Navbar = () => {
             <UpdateLocation />
           </div>
 
-          <div className="flex-1">
-            <SearchBar />
-          </div>
+          <SearchBar />
 
           <div className="hidden lg:flex items-center space-x-4">
             <AccountMenu />
@@ -55,7 +88,7 @@ const Navbar = () => {
             <CartIcon />
           </div>
           {/* User Menu */}
-          <div className="flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             <button className="p-2" onClick={() => setRightNavOpen(true)}>
               <img src={userMenuImage} alt="user-menu" className="h-6" />
             </button>
@@ -91,7 +124,7 @@ const Navbar = () => {
         >
           &times;
         </button>
-        <ul className="p-4">
+        <ul className="ml-8 p-4">
           <li>Your Orders</li>
           <li>Your Account</li>
           <li>Settings</li>

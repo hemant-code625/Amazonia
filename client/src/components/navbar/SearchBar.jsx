@@ -13,8 +13,8 @@ function SearchBar() {
   ];
 
   return (
-    <div className="flex flex-1 m-2.5">
-      <div className="relative group flex-1 focus-within:ring-2 focus-within:ring-amazon-orange rounded-md w-full max-w-xs sm:max-w-md lg:max-w-4xl">
+    <div className="flex flex-1 md:m-2.5">
+      <div className="relative group flex-1 focus-within:ring-2 focus-within:ring-amazon-orange rounded-md w-full lg:max-w-4xl">
         <div className="flex">
           <select
             value={category}
