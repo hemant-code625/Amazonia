@@ -13,8 +13,8 @@ function SearchBar() {
   ];
 
   return (
-    <div className="flex flex-1 max-w-4xl m-2.5">
-      <div className="relative group flex-1 focus-within:ring-2 focus-within:ring-amazon-orange rounded-md">
+    <div className="flex flex-1 m-2.5">
+      <div className="relative group flex-1 focus-within:ring-2 focus-within:ring-amazon-orange rounded-md w-full max-w-xs sm:max-w-md lg:max-w-4xl">
         <div className="flex">
           <select
             value={category}
@@ -34,7 +34,7 @@ function SearchBar() {
             placeholder="Search Amazon.in"
           />
 
-          <button className="h-10 px-6 bg-amazon-orange  rounded-r-md flex items-center justify-center">
+          <button className="h-10 px-6 bg-amazon-orange rounded-r-md flex items-center justify-center">
             <MagnifyingGlassIcon className="h-5 w-5 text-gray-800" />
           </button>
         </div>
