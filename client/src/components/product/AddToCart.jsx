@@ -1,15 +1,15 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
-import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 const AddToCart = ({ price }) => {
   const [quantity, setQuantity] = useState(1);
 
   return (
     <div className="border rounded-lg p-4">
-      <div className="text-2xl text-amazon-orange font-medium">₹{price}</div>
+      <div className="text-2xl text-gray-600 font-medium">₹{price}</div>
 
       <div className="mt-4">
-        <p className="text-sm text-green-600 font-medium">
+        <p className="text-sm text-green-600 font-semibold">
           FREE delivery Tomorrow
         </p>
         <p className="text-sm text-gray-600">Order within 4 hrs 32 mins</p>
