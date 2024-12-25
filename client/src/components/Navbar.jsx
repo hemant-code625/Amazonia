@@ -49,7 +49,7 @@ const Navbar = () => {
       </div>
 
       <div className="block mx-auto md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between ">
           <button
             className="hidden md:block p-2"
             onClick={() => setLeftNavOpen(true)}

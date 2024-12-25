@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import { CATEGORY_GROUPS } from "../../constants/products.js";
 import { useNavigate } from "react-router-dom";
 
@@ -8,18 +6,19 @@ const ExploreCard = () => {
   const handleClick = (category) => {
     navigate("/all");
   };
+
   return (
     <section className="mb-8 cursor-pointer">
       <div
         onClick={() => handleClick()}
-        className="flex flex-row justify-center gap-x-2"
+        className="flex flex-row gap-x-4 overflow-x-auto scrollbar-hidden"
       >
         {CATEGORY_GROUPS.map((category) => (
           <div
             key={category.id}
-            className="flex flex-col items-center justify-between w-1/4 bg-gray-50"
+            className="flex-shrink-0 flex flex-col items-center w-[55%] sm:w-[40%] lg:w-[25%] bg-gray-50 shadow-md mx-2"
           >
-            <h3 className="text-xl font-semibold p-2 max-h-20 text-center">
+            <h3 className="text-lg font-semibold p-2 max-h-20 text-center">
               {category.title}
             </h3>
             <div className="grid grid-cols-2 gap-4 pb-4">
@@ -33,7 +32,7 @@ const ExploreCard = () => {
                     alt={subCategory.title}
                     className="w-32 h-20 object-cover "
                   />
-                  <p className="text-sm font-semibold mt-2">
+                  <p className="text-sm font-semibold mt-1">
                     {subCategory.title}
                   </p>
                 </div>
