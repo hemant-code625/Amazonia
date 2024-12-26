@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const CartItem = ({ item, onUpdateQuantity, onDelete, onClearCart }) => {
+const CartItem = ({ item, onUpdateQuantity, onDelete }) => {
   const handleQuantityChange = (newQuantity) => {
     onUpdateQuantity(item.id, newQuantity);
   };
@@ -40,7 +40,6 @@ const CartItem = ({ item, onUpdateQuantity, onDelete, onClearCart }) => {
           </button>
         </div>
       </div>
-      <button onClick={() => onClearCart()}>Clear Cart</button>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CartItem from "../components/cart/CartItem";
 import CartSummary from "../components/cart/CartSummary";
 // import RelatedProducts from "../components/product/RelatedProducts";
@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const { items, totalAmount } = useSelector((state) => state.cart);
+  const { items } = useSelector((state) => state.cart);
   console.log("Items from cart: ", items);
 
   const handleRemoveItem = (id) => {
@@ -17,11 +17,11 @@ const Cart = () => {
     });
   };
 
-  const handleClearCart = () => {
-    dispatch({
-      type: "cart/clearCart",
-    });
-  };
+  // const handleClearCart = () => {
+  //   dispatch({
+  //     type: "cart/clearCart",
+  //   });
+  // };
 
   const navigate = useNavigate();
 
@@ -53,14 +53,23 @@ const Cart = () => {
           </h1> */}
 
           {items.length === 0 ? (
-            <div className="text-center">
-              <p className="text-xl text-gray-500">Your cart is empty.</p>
-              <button
-                onClick={() => navigate("/all")}
-                className="mt-4 px-6 py-3 bg-amazon-yellow hover:bg-yellow-400 rounded-md transition duration-200"
-              >
-                Start Shopping
-              </button>
+            <div className="bg-white p-4 ">
+              <p className="text-2xl font-semibold mb-3">Your Cart is empty.</p>
+              Your shopping cart is waiting. Give it purpose – fill it with
+              groceries, clothing, household supplies, electronics and more.
+              Continue shopping on the{" "}
+              <a href="/" className="text-blue-600">
+                Amazonia homepage
+              </a>{" "}
+              , learn about{" "}
+              <a href="/gp" className="text-blue-600">
+                today&apos;s deals
+              </a>
+              , or visit your{" "}
+              <a href="/whishlist" className="text-blue-600">
+                Wish List
+              </a>
+              .
             </div>
           ) : (
             <div className="space-y-6">
@@ -70,7 +79,6 @@ const Cart = () => {
                   item={item}
                   onUpdateQuantity={handleUpdateQuantity}
                   onDelete={handleRemoveItem}
-                  onClearCart={handleClearCart}
                 />
               ))}
             </div>
