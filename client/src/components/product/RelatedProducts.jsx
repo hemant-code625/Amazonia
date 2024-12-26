@@ -9,7 +9,12 @@ const RelatedProducts = () => {
       price: 1099.0,
       rating: 4.3,
       reviewCount: 3547,
-      image: "https://placehold.co/300x300?text=Toaster",
+      images: [
+        {
+          url: "https://placehold.co/600x600?text=Toaster+1",
+          alt: "Toaster front view",
+        },
+      ],
     },
   ];
 
