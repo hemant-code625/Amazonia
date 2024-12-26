@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ProductRating from "./product/ProductRating";
 import WishlistButton from "./product/WishlistButton";
 import { formatPrice } from "../utils/formatters";
@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const handleAddtoCart = () => {
     dispatch({
       type: "cart/addItem",
@@ -22,12 +22,12 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Link
-      to={`/product/${product.id}`}
-      className="group bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300 relative flex flex-col"
-    >
+    <div className="group bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300 relative flex flex-col">
       <WishlistButton productId={product.id} />
-      <div className="aspect-square overflow-hidden">
+      <div
+        onClick={() => navigate(`/product/${product.id}`)}
+        className="cursor-pointer aspect-square overflow-hidden"
+      >
         <img
           src={product.images[0].url}
           alt={product.title}
@@ -35,7 +35,10 @@ const ProductCard = ({ product }) => {
         />
       </div>
       <div className="p-4 flex flex-col flex-grow">
-        <h3 className="text-sm sm:text-base font-medium text-gray-800 line-clamp-2 mb-1">
+        <h3
+          onClick={() => navigate(`/product/${product.id}`)}
+          className="cursor-pointer hover:text-orange-600 text-sm sm:text-base font-medium text-gray-800 line-clamp-2 mb-1"
+        >
           {product.title}
         </h3>
         <ProductRating rating={product.rating} />
@@ -51,7 +54,7 @@ const ProductCard = ({ product }) => {
           </button>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

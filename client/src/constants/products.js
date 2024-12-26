@@ -130,6 +130,102 @@ export const BEST_OFFERS = [
       "Touch ID for secure authentication",
     ],
   },
+  {
+    id: 7,
+    title: "OnePlus 9 Pro",
+    price: 899.99,
+    mrp: 999.99,
+    discount: 10,
+    rating: 4.6,
+    reviewCount: "6,529",
+    images: [
+      {
+        url: "https://placehold.co/600x600?text=OnePlus+1",
+        alt: "OnePlus front view",
+      },
+      {
+        url: "https://placehold.co/600x600?text=OnePlus+2",
+        alt: "OnePlus side view",
+      },
+    ],
+    specs: {
+      Capacity: "256GB",
+      Material: "Aluminum, Glass",
+      Voltage: "N/A",
+      Wattage: "N/A",
+    },
+    features: [
+      "Qualcomm Snapdragon 888 processor for fast performance",
+      "Fluid AMOLED display",
+      "5G capable",
+      "Quad-camera system with 48MP Main, 50MP Ultra-Wide, 8MP Telephoto, and 2MP Monochrome cameras",
+      "In-display fingerprint sensor",
+    ],
+  },
+  {
+    id: 8,
+    title: "Google Pixel 6 Pro",
+    price: 999.99,
+    mrp: 1099.99,
+    discount: 9,
+    rating: 4.7,
+    reviewCount: "5,529",
+    images: [
+      {
+        url: "https://placehold.co/600x600?text=Pixel+1",
+        alt: "Pixel front view",
+      },
+      {
+        url: "https://placehold.co/600x600?text=Pixel+2",
+        alt: "Pixel side view",
+      },
+    ],
+    specs: {
+      Capacity: "128GB",
+      Material: "Aluminum, Glass",
+      Voltage: "N/A",
+      Wattage: "N/A",
+    },
+    features: [
+      "Google Tensor chip for fast performance",
+      "6.7-inch LTPO OLED display",
+      "5G capable",
+      "Triple-camera system with 50MP Wide, 12MP Ultra-Wide, and 48MP Telephoto cameras",
+      "In-display fingerprint sensor",
+    ],
+  },
+  {
+    id: 9,
+    title: "Xiaomi Mi 11 Ultra",
+    price: 799.99,
+    mrp: 899.99,
+    discount: 11,
+    rating: 4.4,
+    reviewCount: "4,529",
+    images: [
+      {
+        url: "https://placehold.co/600x600?text=Mi+1",
+        alt: "Mi front view",
+      },
+      {
+        url: "https://placehold.co/600x600?text=Mi+2",
+        alt: "Mi side view",
+      },
+    ],
+    specs: {
+      Capacity: "256GB",
+      Material: "Aluminum, Glass",
+      Voltage: "N/A",
+      Wattage: "N/A",
+    },
+    features: [
+      "Qualcomm Snapdragon 888 processor for fast performance",
+      "6.81-inch AMOLED display",
+      "5G capable",
+      "Triple-camera system with 50MP Wide, 48MP Ultra-Wide, and 48MP Telephoto cameras",
+      "In-display fingerprint sensor",
+    ],
+  },
 ];
 
 export const TRENDING_PRODUCTS = [
@@ -195,6 +291,38 @@ export const TRENDING_PRODUCTS = [
       "Up to 18 hours of battery life",
       "8GB unified memory",
       "Touch ID for secure authentication",
+    ],
+  },
+  {
+    id: 10,
+    title: "Sony A7 IV",
+    price: 2499.99,
+    mrp: 2799.99,
+    discount: 11,
+    rating: 4.8,
+    reviewCount: "3,529",
+    images: [
+      {
+        url: "https://placehold.co/600x600?text=Camera+1",
+        alt: "Camera front view",
+      },
+      {
+        url: "https://placehold.co/600x600?text=Camera+2",
+        alt: "Camera side view",
+      },
+    ],
+    specs: {
+      Capacity: "N/A",
+      Material: "Plastic, Metal",
+      Voltage: "N/A",
+      Wattage: "N/A",
+    },
+    features: [
+      "33MP Full-frame Exmor RS CMOS sensor",
+      "4K video recording",
+      "5-axis in-body image stabilization",
+      "3-inch LCD touchscreen",
+      "Real-time Eye AF for humans and animals",
     ],
   },
 ];
