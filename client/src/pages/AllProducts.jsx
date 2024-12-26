@@ -6,7 +6,7 @@ import { ALL_PRODUCTS } from "../constants/products.js";
 
 const AllProducts = () => {
   const [filters, setFilters] = useState({
-    price: { min: 0, max: 5000 },
+    price: { min: 0, max: 50000 },
     rating: 0,
     category: "all",
   });

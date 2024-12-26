@@ -7,7 +7,20 @@ import PersonalizedRecommendations from "./components/recommendations/Personaliz
 import Footer from "./components/footer/Footer";
 import SignUp from "./components/auth/SignUp";
 import AllProducts from "./pages/AllProducts";
+import { useDispatch } from "react-redux";
+import { setCart } from "./store/slices/cartSlice";
+import { useEffect } from "react";
 const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+
+    if (cartItems) {
+      dispatch(setCart({ items: cartItems }));
+    }
+  }, [dispatch]);
+
   return (
     <Router>
       <div className="min-h-screen bg-gray-100">

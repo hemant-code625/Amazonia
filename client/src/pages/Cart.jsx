@@ -8,7 +8,6 @@ import { useSelector, useDispatch } from "react-redux";
 const Cart = () => {
   const dispatch = useDispatch();
   const { items } = useSelector((state) => state.cart);
-  console.log("Items from cart: ", items);
 
   const handleRemoveItem = (id) => {
     dispatch({

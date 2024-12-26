@@ -31,7 +31,7 @@ const AddToCart = ({ price, onAddtoCart }) => {
       </div>
 
       <button
-        onClick={onAddtoCart}
+        onClick={() => onAddtoCart(quantity)}
         className="mt-4 w-full bg-amazon-yellow hover:bg-yellow-400 text-sm font-medium py-2 px-4 rounded-full"
       >
         Add to Cart

@@ -15,8 +15,7 @@ const ProductDetails = () => {
 
   const dispatch = useDispatch();
 
-  const handleAddtoCart = () => {
-    console.log("Adding to cart");
+  const handleAddtoCart = (quantity) => {
     dispatch({
       type: "cart/addItem",
       payload: {
@@ -24,7 +23,7 @@ const ProductDetails = () => {
         title: product.title,
         image: product.images[0].url,
         price: product.price,
-        quantity: 1,
+        quantity,
       },
     });
   };
@@ -32,7 +31,7 @@ const ProductDetails = () => {
   const { id } = useParams();
 
   const product = ALL_PRODUCTS.find((product) => product.id === parseInt(id));
-  console.log("Product details: ", product);
+
   if (!product) {
     return <div>Product not found</div>;
   }
