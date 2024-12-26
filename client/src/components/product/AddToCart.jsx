@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
-const AddToCart = ({ price }) => {
+const AddToCart = ({ price, onAddtoCart }) => {
   const [quantity, setQuantity] = useState(1);
 
   return (
@@ -30,7 +30,10 @@ const AddToCart = ({ price }) => {
         </select>
       </div>
 
-      <button className="mt-4 w-full bg-amazon-yellow hover:bg-yellow-400 text-sm font-medium py-2 px-4 rounded-full">
+      <button
+        onClick={onAddtoCart}
+        className="mt-4 w-full bg-amazon-yellow hover:bg-yellow-400 text-sm font-medium py-2 px-4 rounded-full"
+      >
         Add to Cart
       </button>
 

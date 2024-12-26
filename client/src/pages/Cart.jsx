@@ -3,36 +3,44 @@ import CartItem from "../components/cart/CartItem";
 import CartSummary from "../components/cart/CartSummary";
 // import RelatedProducts from "../components/product/RelatedProducts";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
-  // Mock cart data (replace with actual cart state management)
-  const [cartItems, setCartItems] = useState([
-    {
-      id: 1,
-      title: "Apple iPhone 13",
-      price: 799.99,
-      quantity: 1,
-      image: "https://placehold.co/300x300",
-    },
-  ]);
+  const dispatch = useDispatch();
+  const { items, totalAmount } = useSelector((state) => state.cart);
+  console.log("Items from cart: ", items);
+
+  const handleRemoveItem = (id) => {
+    dispatch({
+      type: "cart/removeItem",
+      payload: id,
+    });
+  };
+
+  const handleClearCart = () => {
+    dispatch({
+      type: "cart/clearCart",
+    });
+  };
+
   const navigate = useNavigate();
 
   const handleUpdateQuantity = (id, quantity) => {
     // Update the quantity of an item in the cart
-    const updatedCart = cartItems.map((item) =>
+    const updatedCart = items.map((item) =>
       item.id === id ? { ...item, quantity } : item
     );
-    setCartItems(updatedCart);
-  };
 
-  const handleDelete = (id) => {
-    // Delete an item from the cart
-    const updatedCart = cartItems.filter((item) => item.id !== id);
-    setCartItems(updatedCart);
+    dispatch({
+      type: "cart/updateQuantity",
+      payload: updatedCart,
+    });
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Fetch cart items from backend api
   }, []);
 
   return (
@@ -44,7 +52,7 @@ const Cart = () => {
             Your Shopping Cart
           </h1> */}
 
-          {cartItems.length === 0 ? (
+          {items.length === 0 ? (
             <div className="text-center">
               <p className="text-xl text-gray-500">Your cart is empty.</p>
               <button
@@ -56,12 +64,13 @@ const Cart = () => {
             </div>
           ) : (
             <div className="space-y-6">
-              {cartItems.map((item) => (
+              {items.map((item) => (
                 <CartItem
                   key={item.id}
                   item={item}
                   onUpdateQuantity={handleUpdateQuantity}
-                  onDelete={handleDelete}
+                  onDelete={handleRemoveItem}
+                  onClearCart={handleClearCart}
                 />
               ))}
             </div>
@@ -71,7 +80,7 @@ const Cart = () => {
 
         {/* Cart Summary Section */}
         <div className="lg:col-span-1 sticky top-4">
-          <CartSummary items={cartItems} />
+          <CartSummary items={items} />
         </div>
       </div>
     </div>

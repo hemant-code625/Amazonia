@@ -3,8 +3,24 @@ import { Link } from "react-router-dom";
 import ProductRating from "./product/ProductRating";
 import WishlistButton from "./product/WishlistButton";
 import { formatPrice } from "../utils/formatters";
+import { useDispatch } from "react-redux";
 
 const ProductCard = ({ product }) => {
+  const dispatch = useDispatch();
+
+  const handleAddtoCart = () => {
+    dispatch({
+      type: "cart/addItem",
+      payload: {
+        id: product.id,
+        title: product.title,
+        image: product.images[0].url,
+        price: product.price,
+        quantity: 1,
+      },
+    });
+  };
+
   return (
     <Link
       to={`/product/${product.id}`}
@@ -27,7 +43,10 @@ const ProductCard = ({ product }) => {
           <p className="text-lg sm:text-xl font-bold text-gray-900">
             {formatPrice(product.price)}
           </p>
-          <button className="mt-3 w-full bg-amazon-yellow hover:bg-yellow-400 text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-200">
+          <button
+            onClick={handleAddtoCart}
+            className="mt-3 w-full bg-amazon-yellow hover:bg-yellow-400 text-sm font-semibold py-2 px-4 rounded-full transition-colors duration-200"
+          >
             Add to Cart
           </button>
         </div>
