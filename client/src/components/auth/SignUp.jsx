@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 function SignUp() {
   const [formData, setFormData] = useState({
     name: "",
-    mobile: "",
+    email: "",
     password: "",
   });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
@@ -24,7 +25,7 @@ function SignUp() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center pt-8 pb-16 px-4 mt-18">
+    <div className="min-h-screen flex flex-col items-center pt-8 pb-16 px-4 ">
       {/* <Link to="/">
         <img
           src="/amazon-logo-black.png"
@@ -54,10 +55,10 @@ function SignUp() {
           </div>
 
           <div>
-            <label htmlFor="mobile" className="block font-medium mb-1">
-              Mobile number
+            <label htmlFor="email" className="block font-medium mb-1">
+              Email
             </label>
-            <div className="flex">
+            {/* <div className="flex">
               <select className="px-3 py-2 border border-gray-300 rounded-l focus:border-amazon-orange focus:ring-1 focus:ring-amazon-orange">
                 <option>IN +91</option>
               </select>
@@ -70,7 +71,17 @@ function SignUp() {
                 className="flex-1 px-3 py-2 border border-gray-300 rounded-r focus:border-amazon-orange focus:ring-1 focus:ring-amazon-orange"
                 required
               />
-            </div>
+            </div> */}
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter your email"
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:border-amazon-orange focus:ring-1 focus:ring-amazon-orange"
+              required
+            />
           </div>
 
           <div>
@@ -98,7 +109,7 @@ function SignUp() {
             type="submit"
             className="w-full bg-amazon-yellow hover:bg-yellow-400 text-sm font-semibold py-2 px-4 rounded"
           >
-            Verify mobile number
+            Create your account
           </button>
         </form>
 
@@ -137,7 +148,7 @@ function SignUp() {
         <div className="mt-8 text-sm">
           Already have an account?{" "}
           <Link
-            to="/signup"
+            to="/signin"
             className="text-blue-600 hover:text-blue-800 hover:underline"
           >
             Sign in

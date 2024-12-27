@@ -60,7 +60,7 @@ const TrendingProducts = () => {
             {TRENDING_PRODUCTS.map((product) => (
               <div
                 key={product.id}
-                className="flex-shrink-0 w-[calc(100%-1rem)] md:w-1/2 lg:w-1/4 relative"
+                className="flex-shrink-0 w-[calc(100%-8rem)] md:w-1/2 lg:w-1/4 relative"
               >
                 {/* <span className="absolute top-2 left-2 z-10 bg-red-500 text-white px-2 py-1 rounded-md">
                   -{product.discount}%
