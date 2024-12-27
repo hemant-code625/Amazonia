@@ -12,13 +12,19 @@ import { setCart } from "./store/slices/cartSlice";
 import { useEffect } from "react";
 import SignIn from "./components/auth/SignIn";
 import { ToastContainer } from "react-toastify";
+import { setUser } from "./store/slices/userSlice";
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     const cartItems = JSON.parse(localStorage.getItem("cartItems"));
-
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      dispatch(
+        setUser({ user, accessToken: localStorage.getItem("accessToken") })
+      );
+    }
     if (cartItems) {
       dispatch(setCart({ items: cartItems }));
     }

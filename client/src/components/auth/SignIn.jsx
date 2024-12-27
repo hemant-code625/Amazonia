@@ -4,10 +4,11 @@ import { useForm } from "react-hook-form";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 
 const SignIn = () => {
   const { register, handleSubmit, reset } = useForm();
-
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
 
   const url = import.meta.env.VITE_API_URL;
@@ -28,7 +29,7 @@ const SignIn = () => {
         body: JSON.stringify(data),
       });
       const response = await res.json();
-      if (response.statusCode > 400 && response.statusCode < 500) {
+      if (response.statusCode >= 400 && response.statusCode < 500) {
         reset();
         setLoading(false);
         toast.error(response.message);
@@ -39,6 +40,7 @@ const SignIn = () => {
           expires: 7,
         });
         setLoading(false);
+        dispatch({ type: "user/login", payload: response.data });
         navigate("/");
       }
     } catch (error) {
