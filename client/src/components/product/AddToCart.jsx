@@ -5,7 +5,7 @@ const AddToCart = ({ price, onAddtoCart }) => {
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <div className="border rounded-lg p-4">
+    <div className="border border-gray-300 rounded-xl p-4">
       <div className="text-2xl text-gray-600 font-medium">₹{price}</div>
 
       <div className="mt-4">

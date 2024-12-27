@@ -28,7 +28,7 @@ const App = () => {
     <>
       <ToastContainer />
       <Router>
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen">
           <Navbar />
           <main className="pt-[104px]">
             <Routes>

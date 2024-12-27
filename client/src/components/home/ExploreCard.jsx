@@ -16,7 +16,7 @@ const ExploreCard = () => {
         {CATEGORY_GROUPS.map((category) => (
           <div
             key={category.id}
-            className="flex-shrink-0 flex flex-col items-center w-[55%] sm:w-[40%] lg:w-[25%] bg-gray-50 shadow-md mx-2"
+            className="flex-shrink-0 flex flex-col items-center w-[55%] sm:w-[40%] lg:w-[25%] bg-white shadow-md mx-2"
           >
             <h3 className="text-lg font-semibold p-2 max-h-20 text-center">
               {category.title}

@@ -5,15 +5,38 @@ const RelatedProducts = () => {
   const products = [
     {
       id: 1,
-      title: "Pigeon 2 Slice Auto Pop up Toaster",
-      price: 1099.0,
-      rating: 4.3,
-      reviewCount: 3547,
+      title: "Apple iPhone 13",
+      price: 79999,
+      mrp: 99999,
+      discount: 20,
+      rating: 4.5,
+      reviewCount: "10,529",
       images: [
         {
-          url: "https://placehold.co/600x600?text=Toaster+1",
-          alt: "Toaster front view",
+          url: "https://m.media-amazon.com/images/I/61CAYVr34QL._SX679_.jpg",
+          alt: "iPhone side view",
         },
+        {
+          url: "https://m.media-amazon.com/images/I/81junVbiuyL._SX679_.jpg",
+          alt: "iPhone back view",
+        },
+        {
+          url: "https://m.media-amazon.com/images/I/81-hHbjQGSL._SX679_.jpg",
+          alt: "iPhone features",
+        },
+      ],
+      specs: {
+        Capacity: "128GB",
+        Material: "Aluminum, Glass",
+        Voltage: "N/A",
+        Wattage: "N/A",
+      },
+      features: [
+        "A15 Bionic chip for lightning-fast performance",
+        "Super Retina XDR display",
+        "5G capable",
+        "Dual-camera system with 12MP Ultra Wide and Wide cameras",
+        "Face ID for secure authentication",
       ],
     },
   ];

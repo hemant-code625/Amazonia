@@ -27,7 +27,7 @@ const ProductInfo = ({ product }) => {
         </span>
       </div>
 
-      <div className="mt-4 pb-4 border-b">
+      <div className="mt-4 pb-4 border-b border-gray-300">
         <div className="flex items-baseline space-x-2">
           <span className="text-sm">M.R.P.:</span>
           <span className="text-sm line-through">₹{product.mrp}</span>

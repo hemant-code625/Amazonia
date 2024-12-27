@@ -40,7 +40,7 @@ function PriceFilter({ value, onChange }) {
         <input
           type="range"
           min="0"
-          max="80000"
+          max="300000"
           value={localValue.max}
           onChange={(e) =>
             setLocalValue({ ...localValue, max: Number(e.target.value) })

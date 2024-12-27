@@ -5,7 +5,7 @@ import TrendingProducts from "../components/home/TrendingProducts";
 
 const Home = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white">
       <div className="relative">
         <Banner />
         <div className="absolute bottom-[-250px] lg:bottom-[-100px] left-1/2 transform -translate-x-1/2 w-full max-w-8xl mx-auto">

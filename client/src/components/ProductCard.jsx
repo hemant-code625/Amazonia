@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="group bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300 relative flex flex-col">
+    <div className="group rounded-lg overflow-hidden shadow-sm transition-all duration-300 relative flex flex-col">
       <WishlistButton productId={product.id} />
       <div
         onClick={() => navigate(`/product/${product.id}`)}
