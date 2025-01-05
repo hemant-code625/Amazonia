@@ -110,12 +110,11 @@ amazonia/
 ### 📷 **Screenshots**
 
 #### Homepage
+![Homepage](https://github.com/user-attachments/assets/259baa83-4cdc-4404-b598-d35cfc8e3011)
 
-![Homepage](https://github.com/user-attachments/assets/36162bea-077f-4feb-a508-3d346cdf7fb3)
 
 #### Product Page
-
-![Product Page](https://via.placeholder.com/800x400?text=Product+Page)
+![Product-Page](https://github.com/user-attachments/assets/aff7d952-708b-4990-93e6-7055c9e4af2f)
 
 ---
 
@@ -138,7 +137,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 Feel free to reach out for any queries or suggestions:
 
-- **Email**: anmolpawar877@gmail.com
-- **GitHub**: [your-username](https://github.com/hemant-code625/Amazonia)
+- **Email**: hemantsinghparmar@mgmtech.org
+- **GitHub**: [hemant-code625](https://github.com/hemant-code625/Amazonia)
 
 ---
